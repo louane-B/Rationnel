@@ -133,7 +133,12 @@ namespace CalculatriceRationnel
         /// <returns>Rationnel résultat de la division.</returns>
         public Rationnel Diviser(Rationnel rationnel)
         {
-           // a compléter
+          Rationnel unRationnel = new Rationnel();
+            unRationnel.Numerateur = (Numerateur * rationnel.Denominateur);
+            unRationnel.Denominateur = (Denominateur * rationnel.Numerateur);
+            unRationnel.Simplifier();
+            return unRationnel;
+
         }
     }
 }
