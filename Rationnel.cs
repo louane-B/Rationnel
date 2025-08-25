@@ -72,7 +72,28 @@ namespace CalculatriceRationnel
         /// <returns>Rationnel résultat de l'addition.</returns>
         public Rationnel Ajouter(Rationnel rationnel)
         {
-            // a compléter
+            Rationnel unRationnel = new Rationnel();
+            unRationnel.Numerateur = (Numerateur * rationnel.Denominateur) + (Denominateur * rationnel.Numerateur);
+            unRationnel.Denominateur = (Denominateur * rationnel.Denominateur);
+            unRationnel.Simplifier();
+            return unRationnel;
+        }
+
+         /// <summary>
+        /// Méthode de service permettant de simplifier un rationnel.
+        /// </summary>
+        private void Simplifier()
+        {
+            int X;
+            int diviseur = 0;
+            X = (Numerateur > Denominateur ? Numerateur : Denominateur);
+            for (int i = 1; i <= X; i++)
+                if (Numerateur % i == 0)
+                    if (Denominateur % i == 0)
+                        diviseur = i;
+            Numerateur = Numerateur / diviseur;
+            Denominateur = Denominateur / diviseur;
+
         }
 
         /// <summary>
@@ -103,14 +124,6 @@ namespace CalculatriceRationnel
         public Rationnel Diviser(Rationnel rationnel)
         {
            // a compléter
-        }
-
-        /// <summary>
-        /// Méthode de service permettant de simplifier un rationnel.
-        /// </summary>
-        private void Simplifier()
-        {
-            // a compléter 
         }
     }
 }
