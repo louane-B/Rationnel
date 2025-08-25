@@ -72,11 +72,7 @@ namespace CalculatriceRationnel
         /// <returns>Rationnel résultat de l'addition.</returns>
         public Rationnel Ajouter(Rationnel rationnel)
         {
-            Rationnel unRationnel = new Rationnel();
-            unRationnel.Numerateur = (Numerateur * rationnel.Denominateur) + (Denominateur * rationnel.Numerateur);
-            unRationnel.Denominateur = (Denominateur * rationnel.Denominateur);
-            unRationnel.Simplifier();
-            return unRationnel;
+            // a compléter
         }
 
         /// <summary>
@@ -86,11 +82,7 @@ namespace CalculatriceRationnel
         /// <returns>Rationnel résultat de la soustraction.</returns>
         public Rationnel Soustraire(Rationnel rationnel)
         {
-            Rationnel unRationnel = new Rationnel();
-            unRationnel.Numerateur = (Numerateur * rationnel.Denominateur) - (Denominateur * rationnel.Numerateur);
-            unRationnel.Denominateur = (Denominateur * rationnel.Denominateur);
-            unRationnel.Simplifier();
-            return unRationnel;
+            // a compléter
         }
 
         /// <summary>
@@ -100,11 +92,7 @@ namespace CalculatriceRationnel
         /// <returns>Rationnel résultat de la multiplication.</returns>
         public Rationnel Multiplier(Rationnel rationnel)
         {
-            Rationnel unRationnel = new Rationnel();
-            unRationnel.Numerateur = (Numerateur * rationnel.Numerateur);
-            unRationnel.Denominateur = (Denominateur * rationnel.Denominateur);
-            unRationnel.Simplifier();
-            return unRationnel;
+            // a compléter
         }
 
         /// <summary>
@@ -114,11 +102,7 @@ namespace CalculatriceRationnel
         /// <returns>Rationnel résultat de la division.</returns>
         public Rationnel Diviser(Rationnel rationnel)
         {
-            Rationnel unRationnel = new Rationnel();
-            unRationnel.Numerateur = (Numerateur * rationnel.Denominateur);
-            unRationnel.Denominateur = (Denominateur * rationnel.Numerateur);
-            unRationnel.Simplifier();
-            return unRationnel;
+           // a compléter
         }
 
         /// <summary>
@@ -126,15 +110,7 @@ namespace CalculatriceRationnel
         /// </summary>
         private void Simplifier()
         {
-            int X;
-            int diviseur = 0;
-            X = (Numerateur > Denominateur ? Numerateur : Denominateur);
-            for (int i = 1; i <= X; i++)
-                if (Numerateur % i == 0)
-                    if (Denominateur % i == 0)
-                        diviseur = i;
-            Numerateur = Numerateur / diviseur;
-            Denominateur = Denominateur / diviseur;
+            // a compléter 
         }
     }
 }
