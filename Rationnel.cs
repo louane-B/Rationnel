@@ -118,7 +118,12 @@ namespace CalculatriceRationnel
         /// <returns>Rationnel résultat de la multiplication.</returns>
         public Rationnel Multiplier(Rationnel rationnel)
         {
-            // a compléter
+             Rationnel unRationnel = new Rationnel();
+            unRationnel.Numerateur = (Numerateur * rationnel.Numerateur);
+            unRationnel.Denominateur = (Denominateur * rationnel.Denominateur);
+            unRationnel.Simplifier();
+            return unRationnel;
+
         }
 
         /// <summary>
