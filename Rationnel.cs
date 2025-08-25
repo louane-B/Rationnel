@@ -103,7 +103,12 @@ namespace CalculatriceRationnel
         /// <returns>Rationnel résultat de la soustraction.</returns>
         public Rationnel Soustraire(Rationnel rationnel)
         {
-            // a compléter
+             Rationnel unRationnel = new Rationnel();
+            unRationnel.Numerateur = (Numerateur * rationnel.Denominateur) - (Denominateur * rationnel.Numerateur);
+            unRationnel.Denominateur = (Denominateur * rationnel.Denominateur);
+            unRationnel.Simplifier();
+            return unRationnel;
+
         }
 
         /// <summary>
